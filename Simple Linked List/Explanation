@@ -1,0 +1,84 @@
+# Singly Linked List Implementation
+
+This C++ program demonstrates a basic implementation of a singly linked list. It includes functions to insert nodes at the tail (end) of the list and display the list contents.
+
+### Key Components of the Code
+
+1. **Class Definition for `node`**
+   ```cpp
+   class node {
+   public:
+       int data;
+       node* next;
+
+       node(int value) {
+           data = value;
+           next = NULL;
+       }
+   };
+   ```
+   - **Purpose**: Represents each element (node) in the linked list.
+   - **Attributes**:
+     - `int data`: Stores the data value for the node.
+     - `node* next`: Pointer to the next node in the list.
+   - **Constructor**:
+     - `node(int value)`: Initializes a new node with `data` set to `value` and `next` set to `NULL`, indicating the node is not yet connected to another node.
+
+2. **`insertattail` Function**
+   ```cpp
+   void insertattail(node* &head, int value)
+   ```
+   - **Purpose**: Inserts a new node with the specified `value` at the end of the list.
+   - **Parameters**:
+     - `node* &head`: Reference to the head pointer of the linked list.
+     - `int value`: Value to store in the new node.
+   - **Logic**:
+     - If `head` is `NULL` (i.e., the list is empty), the function assigns the new node to `head`, making it the first node.
+     - Otherwise, it iterates to the end of the list and updates the last node’s `next` pointer to point to the new node.
+
+   Example:
+   ```cpp
+   insertattail(head, 1); // Inserts a node with data '1' at the end of the list.
+   ```
+
+3. **`display` Function**
+   ```cpp
+   void display(node* head)
+   ```
+   - **Purpose**: Outputs the values in the linked list starting from `head` to the last node.
+   - **Parameters**:
+     - `node* head`: The head pointer of the linked list.
+   - **Logic**:
+     - The function iterates through each node in the list, printing the `data` of each node followed by a space.
+
+   Example:
+   ```cpp
+   display(head); // Displays the linked list.
+   ```
+
+4. **Main Function (`main`)**
+   ```cpp
+   int main()
+   ```
+   - **Purpose**: Initializes a linked list, adds nodes, and displays the list content.
+   - **Steps**:
+     - Declares `node* head = NULL`, initializing an empty linked list.
+     - Calls `insertattail(head, value)` three times to insert values `1`, `2`, and `3` at the end of the list.
+     - Calls `display(head)` to print the list.
+
+### Example Execution
+
+**Output:**
+```
+1 2 3
+```
+
+In this example:
+- The program creates a linked list with values `1`, `2`, and `3`.
+- `display` prints these values in the order they were inserted.
+
+### Explanation of Linked List Structure
+
+- **Head**: The pointer that references the first node in the list.
+- **Node**: Each element of the list, containing `data` and a `next` pointer to the following node.
+- **Tail Insertion**: New nodes are added to the end of the list, maintaining order from head to tail.
