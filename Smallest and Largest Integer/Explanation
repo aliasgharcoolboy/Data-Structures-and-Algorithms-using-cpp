@@ -1,0 +1,61 @@
+Explanation of Code: Finding Largest and Smallest Elements in an Array
+
+Purpose:
+This program takes an array of integers as input, identifies the largest and smallest numbers in the array, and provides their values along with their indices.
+
+Code Breakdown:
+
+#include <iostream> includes the standard library for input and output operations (cin and cout).
+
+#include <climits> includes the library that provides constants such as INT_MIN (minimum integer value) and INT_MAX (maximum integer value).
+
+using namespace std; allows usage of standard library elements (e.g., cin, cout) without explicitly prefixing them with std::.
+
+The program starts with the main function, which is the entry point of the program.
+
+The variable n is declared to store the size of the array. The user is prompted to input the size, and the value is stored in n using cin.
+
+Two variables, largest and smallest, are initialized:
+
+largest is set to INT_MIN to ensure any input number will be larger.
+smallest is set to INT_MAX to ensure any input number will be smaller.
+Two more variables, max_index and min_index, are declared to store the indices of the largest and smallest numbers.
+
+An array num of size n is declared to store the numbers entered by the user.
+
+A for loop runs from 0 to n-1. During each iteration:
+
+The user is prompted to input a number.
+The number is stored in the num array.
+Another for loop runs through the array to find the largest and smallest numbers:
+
+If the current number is greater than largest, largest is updated to the current number, and the index is stored in max_index.
+If the current number is smaller than smallest, smallest is updated to the current number, and the index is stored in min_index.
+The program prints the largest number along with its index and the smallest number along with its index.
+
+Finally, the program returns 0 to indicate successful execution.
+
+Example Input/Output:
+
+Input:
+Input the size of array
+5
+Input a number
+10
+Input a number
+25
+Input a number
+5
+Input a number
+50
+Input a number
+20
+
+Output:
+The largest number is 50 at index 3
+The smallest number is 5 at index 2
+
+Key Notes:
+
+The array is declared dynamically based on the user's input size (int num[n];). While this works in many compilers, it is not strictly standard C++. To ensure portability, you can use std::vector instead of a raw array.
+Edge cases such as n = 0 or invalid inputs are not handled. Adding input validation is recommended to make the code more robust.
