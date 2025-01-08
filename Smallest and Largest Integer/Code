@@ -1,0 +1,39 @@
+#include <iostream>
+#include <climits>
+using namespace std;
+int main()
+{   
+    int n;
+    cout<<"Input the size of array"<<endl;
+    cin>>n;
+    
+    int largest = INT_MIN;
+    int smallest = INT_MAX;
+    
+    int max_index;
+    int min_index;
+    
+    int num[n];
+    for(int i=0;i<n;i++){
+        cout<<"Input a number"<<endl;
+        cin>>num[i];
+    }
+    
+    for(int i=0;i<=n-1;i++){
+        if(num[i] > largest){
+            largest = num[i];
+            max_index = i;
+        }
+        
+        if(num[i] < smallest){
+            smallest = num[i];
+            min_index = i;
+        }
+    }
+    
+    cout<<"The largest number is "<<largest<<" at index "<<max_index<<endl;
+    cout<<"The smallest number is "<<smallest<<" at index "<<min_index<<endl;
+    
+
+    return 0;
+}
