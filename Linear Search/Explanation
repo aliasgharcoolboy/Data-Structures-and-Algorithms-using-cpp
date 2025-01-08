@@ -1,0 +1,75 @@
+Explanation of Code: Linear Search Algorithm in C++
+
+Purpose:  
+This program demonstrates the implementation of the linear search algorithm. It takes an array of integers and a target value as input, searches for the target in the array, and outputs the index of the target if found. If the target is not found, it outputs a message indicating so.
+
+Code Breakdown:  
+
+1. `#include <iostream>` includes the standard library for input and output operations (`cin` and `cout`).  
+2. `using namespace std;` allows usage of standard library elements (e.g., `cin`, `cout`) without explicitly prefixing them with `std::`.  
+
+3. The `linearSearch` function is defined to perform the search operation:
+   - It takes three arguments:
+     - `array[]`: The array in which the search is to be performed.
+     - `size`: The size of the array.
+     - `target`: The value to be searched.
+   - A `for` loop iterates through the array, checking each element:
+     - If the current element matches the target, the function outputs the index where the target is found and returns, ending the function.
+     - If the loop completes without finding the target, a message is printed indicating that the target is not found.
+
+4. The program begins execution with the `main` function:
+   - The variable `n` is declared to store the size of the array. The user is prompted to input the size, and the value is stored in `n` using `cin`.
+   - An array `num` of size `n` is declared to store the elements of the array. A `for` loop runs from `0` to `n-1` to:
+     - Prompt the user to input a number.
+     - Store the input values in the array.
+   - The variable `target` is declared to store the value to be searched. The user is prompted to input the target value.
+   - The `linearSearch` function is called with `num`, `n`, and `target` as arguments.
+
+5. The program returns `0` to indicate successful execution.
+
+Example Input/Output:  
+
+Input:  
+Input the size of array  
+5  
+Input a number  
+10  
+Input a number  
+20  
+Input a number  
+30  
+Input a number  
+40  
+Input a number  
+50  
+Input the element to be searched  
+30  
+
+Output:  
+The element 30 is found at index 2  
+
+Input:  
+Input the size of array  
+4  
+Input a number  
+1  
+Input a number  
+2  
+Input a number  
+3  
+Input a number  
+4  
+Input the element to be searched  
+5  
+
+Output:  
+5 not found in array  
+
+Key Notes:  
+1. The array is declared dynamically based on the user's input size (`int num[n];`). While this works in many compilers, it is not strictly standard C++. For a portable solution, you may use `std::vector`.  
+2. The function stops searching as soon as the target is found, making it efficient for smaller arrays. However, it is less efficient for large arrays where the target is near the end or not present at all.  
+3. Input validation for `n` or non-integer inputs is not implemented, which could be added for robustness.  
+
+--- 
+
+This explanation is suitable for plain text documentation and will not render as Markdown or HTML when copied into GitHub. Let me know if you need further assistance!
