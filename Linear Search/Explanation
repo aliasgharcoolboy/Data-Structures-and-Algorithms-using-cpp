@@ -69,7 +69,3 @@ Key Notes:
 1. The array is declared dynamically based on the user's input size (`int num[n];`). While this works in many compilers, it is not strictly standard C++. For a portable solution, you may use `std::vector`.  
 2. The function stops searching as soon as the target is found, making it efficient for smaller arrays. However, it is less efficient for large arrays where the target is near the end or not present at all.  
 3. Input validation for `n` or non-integer inputs is not implemented, which could be added for robustness.  
-
---- 
-
-This explanation is suitable for plain text documentation and will not render as Markdown or HTML when copied into GitHub. Let me know if you need further assistance!
