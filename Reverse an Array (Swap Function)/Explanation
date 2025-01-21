@@ -1,0 +1,26 @@
+Explanation of the Code: Reverse an Array Using a Loop in C++:
+
+1. The program begins by including a library that allows input and output operations, such as taking user input and displaying messages on the screen.
+
+2. A namespace is used to avoid adding prefixes for standard library functions, making the code more concise.
+
+3. A **swap function** is defined to exchange the values of two variables. However, in this version of the code, it uses **pass-by-value** instead of **pass-by-reference**. This means the function works on copies of the variables rather than modifying the originals, but it does not impact the swapping logic when used with array elements in the loop.
+
+4. The main function starts by asking the user to input the size of the array and stores this value in a variable.
+
+5. An array of the specified size is declared. The program then loops through the array and asks the user to input each element, storing it in the array.
+
+6. After taking all inputs, the program displays the **original array** by iterating through the array and printing each element separated by spaces.
+
+7. To reverse the array:
+   - The program uses a **for loop** that iterates only up to the middle of the array (`size / 2`).  
+   - For each iteration, the first element is swapped with the last, the second with the second-to-last, and so on, until the loop reaches the middle.  
+   - This ensures that all elements are reversed without the need for an additional array.
+
+8. After reversing, the program displays the **reversed array** by iterating through the modified array and printing each element.
+
+9. The program ends by returning a success message to the operating system.
+
+
+Summary:
+This program achieves the same result as the previous one: reversing an array entered by the user. However, it simplifies the logic by directly incorporating the reversal loop in the main function instead of using a separate function. The loop iterates up to half the array's size, swapping corresponding elements from the beginning and end. This approach ensures an efficient reversal without additional overhead.
