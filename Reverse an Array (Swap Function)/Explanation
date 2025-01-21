@@ -4,7 +4,7 @@ Explanation of the Code: Reverse an Array Using a Loop in C++:
 
 2. A namespace is used to avoid adding prefixes for standard library functions, making the code more concise.
 
-3. A **swap function** is defined to exchange the values of two variables. However, in this version of the code, it uses **pass-by-value** instead of **pass-by-reference**. This means the function works on copies of the variables rather than modifying the originals, but it does not impact the swapping logic when used with array elements in the loop.
+3. A **swap function** is defined to exchange the values of two variables using **pass-by-reference** approach  
 
 4. The main function starts by asking the user to input the size of the array and stores this value in a variable.
 
