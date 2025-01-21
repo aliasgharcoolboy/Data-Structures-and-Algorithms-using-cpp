@@ -1,0 +1,89 @@
+#include <iostream>
+using namespace std;
+
+void swap(int &i, int &j){
+    int temp = i;
+    i = j;
+    j = temp;
+}
+
+int main()
+{
+   int size;
+   cout<<"Input the size of array"<<endl;
+   cin>>size;
+   
+   int numbers[size];
+   for(int i =0;i<size;i++){
+       cout<<"Please input an element"<<endl;
+       cin>>numbers[i];
+   }
+   
+   cout<<"The original array is"<<endl;
+   for(int i=0;i<size;i++){
+       cout<<numbers[i]<<" ";
+   }
+   cout<<endl;
+   
+   
+   
+    for (int i = 0; i < size / 2; i++) { /******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+void swap(int i, int j){
+    int temp = i;
+    i = j;
+    j = temp;
+}
+
+int main()
+{
+   int size;
+   cout<<"Input the size of array"<<endl;
+   cin>>size;
+   
+   int numbers[size];
+   for(int i =0;i<size;i++){
+       cout<<"Please input an element"<<endl;
+       cin>>numbers[i];
+   }
+   
+   cout<<"The original array is"<<endl;
+   for(int i=0;i<size;i++){
+       cout<<numbers[i]<<" ";
+   }
+   cout<<endl;
+   
+   
+
+    for (int i=0; i<size/2; i++) {  // Reverse only up to the middle of the array
+        swap(numbers[i], numbers[size - 1 - i]);  
+    }
+   
+   cout<<"The reversed array is "<<endl;
+    for(int i=0;i<size;i++){
+       cout<<numbers[i]<<" ";
+   }
+   cout<<endl;
+
+    return 0;
+}
+        swap(numbers[i], numbers[size - 1 - i]);  
+    }
+   
+   cout<<"The reversed array is "<<endl;
+    for(int i=0;i<size;i++){
+       cout<<numbers[i]<<" ";
+   }
+   cout<<endl;
+
+    return 0;
+}
