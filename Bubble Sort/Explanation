@@ -1,0 +1,34 @@
+Explanation of the Code: Bubble Sort Implementation in C++:
+
+1. The program starts by including a library that provides functionalities for input and output operations, allowing the program to take user input and display messages.
+
+2. A namespace is used to simplify the code, avoiding the need for prefixes like `std::` with standard library functions.
+
+3. A **swap function** is defined to exchange the values of two variables. It uses **pass-by-reference**, meaning it works directly on the original variables by modifying their memory locations.
+
+4. A **BubbleSort function** is defined to sort an array of integers in ascending order using the Bubble Sort algorithm:
+   - It consists of **two nested loops**:
+     - The outer loop runs for the total number of elements minus one (`size - 1`), as the array will be sorted after that many passes.
+     - The inner loop compares adjacent elements, swapping them if the element on the left is greater than the element on the right.  
+     - After each pass, the largest unsorted element is moved to its correct position at the end of the array.
+   - The inner loop's range decreases with each pass (`size - 1 - i`), as the largest elements get sorted and need not be compared again.
+
+5. The main function starts by prompting the user to input the size of the array, which is stored in a variable.
+
+6. An array of the specified size is declared. The program then loops through the array to take user input, storing each number in the array.
+
+7. The **BubbleSort function** is called to sort the array. Since the function modifies the original array, no additional array is needed for storing the sorted elements.
+
+8. After sorting, the program displays the **sorted array** by iterating through the array and printing each element in ascending order.
+
+9. The program ends by returning a success message to the operating system.
+
+Key Points of Bubble Sort:
+
+1. Bubble Sort is a simple sorting algorithm that repeatedly compares adjacent elements and swaps them if needed.
+2. It is called "Bubble Sort" because smaller elements gradually "bubble" to the top (beginning) of the array, while larger elements "sink" to the bottom (end).
+3. This implementation optimizes the range of the inner loop after each pass, reducing unnecessary comparisons for already sorted elements.
+
+Summary:
+
+The program sorts an array entered by the user in ascending order using the Bubble Sort algorithm. The logic involves repeatedly comparing and swapping adjacent elements in a nested loop structure. It uses a custom swap function for value exchange, ensuring readability and modularity. While Bubble Sort is straightforward to implement, it is not the most efficient sorting algorithm for large datasets due to its quadratic time complexity.
