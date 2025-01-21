@@ -1,0 +1,28 @@
+Explanation of the Code: Reverse an Array in C++:
+
+1. The program starts by including a library that enables input and output operations, such as displaying messages on the screen or taking user input.
+
+2. A namespace is used to simplify the code by avoiding repetitive prefixes for standard library functions.
+
+3. A **swap function** is defined to exchange the values of two numbers. This function directly modifies the original variables by using references, meaning it doesn't create copies but works on the actual memory addresses of the variables.
+
+4. Another function, **reverseArray**, is defined to reverse the order of elements in an array.  
+   - Two pointers are used: one starting at the first element of the array and the other at the last element.  
+   - These pointers move toward each other while swapping the elements they point to.  
+   - The process continues until the pointers meet or cross each other, ensuring the array is reversed.
+
+5. The main function begins by asking the user to input the size of the array. The size is stored in a variable.
+
+6. An array of the specified size is declared. The program then asks the user to input each element of the array one by one. These elements are stored in the array.
+
+7. Once the array is populated, the program displays the original array by looping through its elements and printing each one.
+
+8. The **reverseArray** function is called to reverse the order of elements in the array. The function modifies the original array directly, so no additional array is needed.
+
+9. After reversing, the program again loops through the array to display the reversed version.
+
+10. The program ends by returning a success message to the operating system.
+
+---
+Summary:
+The program takes an array as input from the user, displays it, reverses its elements using a custom function, and then displays the reversed array. The logic uses basic programming techniques like loops, pointers, and swapping, making it efficient and straightforward.
