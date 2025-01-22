@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+void swap(int &i, int &j){
+    int temp = i;
+    i = j;
+    j = temp;
+}
+
+void SelectionSort(int array[], int size){
+    for(int i=0;i<size-1;i++){
+        int smallestIndex = i;
+        for(int j=i+1;j<size;j++){
+            if(array[j] < array[smallestIndex]){
+                smallestIndex = j;
+            }
+        }
+        
+        swap(array[i], array[smallestIndex]);
+    }
+}
+
+int main()
+{
+    int n;
+    cout<<"Input the size of array"<<endl;
+    cin>>n;
+    
+    int num[n];
+    for(int i=0;i<n;i++){
+        cout<<"Input a number"<<endl;
+        cin>>num[i];
+    }
+    
+    cout<<"Here is the oroginal array"<<endl;
+     for(int i=0;i<n;i++){
+        cout<<num[i]<<" ";
+    } cout<<endl;
+    
+    SelectionSort(num, n);
+    
+    cout<<"Here is the array sorted by selection sort in ascending order"<<endl;
+    for(int i=0;i<n;i++){
+        cout<<num[i]<<" ";
+    } cout<<endl;
+
+    return 0;
+}
