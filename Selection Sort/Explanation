@@ -19,7 +19,6 @@ Explanation of the Code: Selection Sort Implementation in C++:
    - After completing the inner loop, the smallest element is swapped with the current element using the `swap` function.  
    - This ensures that the current position in the array has the correct (smallest) value for that pass.  
    - The process is repeated until the entire array is sorted.
-   - The main thing to remember is to play with indices of the array. This index is used to check the value at a specific index and compare them. Ultimately, indices are swapped if needed
 
 
 5. Main Function:  
@@ -54,6 +53,9 @@ Key Points of Selection Sort:
 
 ---
 
+Note: The main thing to remember is to play with indices of the array. This index is used to check the value at a specific index and compare them. Ultimately, indices are swapped if needed
+
+
 Summary:
 
-This program sorts an array entered by the user in ascending order using the **Selection Sort algorithm**. The logic involves repeatedly finding the smallest element in the unsorted part of the array and swapping it with the current position. The algorithm is straightforward and demonstrates the fundamentals of sorting but is not optimal for larger datasets due to its quadratic time complexity.
+This program sorts an array entered by the user in ascending order using the Selection Sort algorithm. The logic involves repeatedly finding the smallest element in the unsorted part of the array and swapping it with the current position. The algorithm is straightforward and demonstrates the fundamentals of sorting but is not optimal for larger datasets due to its quadratic time complexity.
