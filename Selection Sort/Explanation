@@ -1,0 +1,59 @@
+
+
+Explanation of the Code: Selection Sort Implementation in C++:
+
+1. Program Start: 
+   The program begins by including a library that provides input and output functionality, enabling interaction with the user through the console.
+
+2. Using Namespace:
+   A namespace is used to simplify code, so standard library functions like `cout` and `cin` can be used without prefixes.
+
+3. Swap Function:  
+   A `swap` function is defined to exchange the values of two variables. It uses **pass-by-reference**, meaning the function directly modifies the original variables by accessing their memory locations.
+
+4. SelectionSort Function:  
+   The core logic for sorting is implemented in this function:  
+   - Outer Loop: Iterates through the array, treating the current element as the "smallest" in the unsorted portion of the array.  
+   - Inner Loop: Searches for the smallest element in the unsorted portion of the array, starting from the index after the current one.  
+   - If a smaller element is found, its index is stored.  
+   - After completing the inner loop, the smallest element is swapped with the current element using the `swap` function.  
+   - This ensures that the current position in the array has the correct (smallest) value for that pass.  
+   - The process is repeated until the entire array is sorted.
+   - The main thing to remember is to play with indices of the array. This index is used to check the value at a specific index and compare them. Ultimately, indices are swapped if needed
+
+
+5. Main Function:  
+   - The program prompts the user to input the size of the array, which is stored in a variable.  
+   - An array of the specified size is declared. A loop is used to take input for each element from the user, populating the array.  
+   - After input, the program displays the **original array** by looping through its elements and printing them.
+
+6. Sorting the Array: 
+   - The `SelectionSort` function is called to sort the array in ascending order.  
+   - The function modifies the original array, so no additional array is required to store the sorted elements.
+
+7. Displaying the Sorted Array:  
+   - After sorting, the program displays the **sorted array** by iterating through its elements and printing them.
+
+8. Program End:  
+   The program concludes by returning a success message to the operating system.
+
+---
+
+Key Points of Selection Sort:
+
+1. Algorithm Logic:  
+   - Selection Sort divides the array into two parts: sorted and unsorted.  
+   - It repeatedly selects the smallest element from the unsorted portion and places it at the beginning of the sorted portion.  
+
+2. Efficiency: 
+   - Selection Sort has a time complexity of **O(n²)** for both best and worst cases, making it less efficient for large datasets.  
+   - However, it is simple and does not require additional memory for sorting, making it suitable for smaller datasets.
+
+3. Swapping:  
+   - The `swap` function ensures that the current element is exchanged with the smallest found during each pass, resulting in a sorted array.
+
+---
+
+Summary:
+
+This program sorts an array entered by the user in ascending order using the **Selection Sort algorithm**. The logic involves repeatedly finding the smallest element in the unsorted part of the array and swapping it with the current position. The algorithm is straightforward and demonstrates the fundamentals of sorting but is not optimal for larger datasets due to its quadratic time complexity.
