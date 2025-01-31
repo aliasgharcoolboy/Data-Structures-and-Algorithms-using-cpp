@@ -1,0 +1,45 @@
+Explanation of the Code: Insertion Sort Implementation in C++
+Program Start:
+The program begins by including a library that allows input and output operations, enabling interaction with the user via the console.
+
+Using Namespace
+The using namespace std; statement allows the program to use standard functions like cout and cin without requiring the std:: prefix.
+
+InsertionSort Function
+This function sorts an array in ascending order using the Insertion Sort algorithm.
+
+The function takes two parameters: an array and its size.
+The algorithm starts from the second element (index 1), treating the first element as already sorted.
+A loop iterates through the array, picking the current element (curr) and comparing it with the previous elements.
+A while loop shifts larger elements to the right, making space for the current element in its correct position.
+After finding the right position, the current element is inserted into the array.
+Main Function
+
+The program prompts the user to input the size of the array, storing it in a variable.
+An array of the given size is declared, and a loop is used to take user input, filling the array.
+The program then displays the original array by iterating through its elements.
+Sorting Process
+
+The InsertionSort function is called to sort the array in ascending order.
+Since the function modifies the original array, no additional array is required.
+Displaying the Sorted Array
+
+After sorting, the program prints the sorted array by looping through its elements.
+Program End
+
+The program concludes by returning 0, indicating successful execution.
+Key Points of Insertion Sort
+Algorithm Logic:
+
+Insertion Sort divides the array into sorted and unsorted parts.
+It picks an element from the unsorted part and places it in the correct position in the sorted part by shifting larger elements to the right.
+Efficiency:
+
+Best Case (Already Sorted): O(n) (Only comparisons, no shifting).
+Worst and Average Case: O(n²) (Each element may need shifting).
+It is more efficient than Bubble Sort and Selection Sort for nearly sorted data.
+Shifting Instead of Swapping:
+
+Unlike Selection and Bubble Sort, Insertion Sort shifts elements instead of swapping, reducing unnecessary memory writes.
+Summary:
+This program sorts an array entered by the user using the Insertion Sort algorithm. The logic involves selecting an element and shifting larger elements to make space for it in the correct position. It is efficient for small or nearly sorted datasets but has O(n²) complexity for large, unsorted data.
