@@ -1,0 +1,34 @@
+The program demonstrates how to insert an element at the end of an array in C++. It follows a straightforward approach where the user provides input for the array size and elements, and then an additional element is inserted at the end.
+
+The program starts by including the necessary header file <iostream> and using the standard namespace. The function InsertionAtEnd takes an array and its size as parameters. The function prompts the user to input an element to be inserted. It then assigns this element to the index corresponding to the current size of the array. After inserting the element, the size of the array is incremented by one to reflect the change.
+
+In the main function, the program begins by asking the user for the initial size of the array. It then initializes an array of fixed size 50 to store the elements. The program iterates through a loop to take user input and store elements in the array.
+
+After populating the array, the InsertionAtEnd function is called to insert a new element at the end. Finally, the updated array is displayed using a loop that prints each element.
+
+The function `InsertionAtEnd` is designed to insert an element at the end of an array. It takes two parameters:  
+
+1. `array[]` – The integer array where the new element will be inserted.  
+2. `size` – A reference variable that keeps track of the number of elements in the array.  
+
+Step-by-step working of the function:  
+
+1. The function first prompts the user to input an element to insert.  
+2. This element is stored in a variable `Element_To_Insert`.  
+3. The function assigns `Element_To_Insert` to the index `size` in the array. This works because array indexing starts from 0, so if there are `size` elements in the array, the next available position is at index `size`.  
+4. The function then increments `size` by 1 to reflect that a new element has been added.  
+
+Example Execution:
+
+Suppose the initial array is:  
+`numbers = {2, 5, 8, 10}` with `size = 4`  
+
+If the user inputs `12` as the element to be inserted, the function does the following:  
+- Assigns `numbers[4] = 12`  
+- Increments `size` to 5  
+
+After execution, the updated array will be `{2, 5, 8, 10, 12}` with `size = 5`.  
+
+This logic ensures that an element is always added at the next available position in the array. However, since the array has a fixed maximum size of 50, inserting beyond this limit would lead to an overflow issue, which the program does not currently handle.
+
+A key aspect of this implementation is that it assumes a predefined maximum size of 50. If the array is already full, inserting an additional element may cause an overflow. However, within the given constraints, the program successfully demonstrates the insertion of an element at the end of an array.
