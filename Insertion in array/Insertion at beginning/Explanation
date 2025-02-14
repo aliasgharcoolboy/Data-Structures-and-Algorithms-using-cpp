@@ -1,0 +1,51 @@
+**Explanation of the Code: Insert an Element at the Beginning of an Array**  
+
+The program is designed to insert an element at the beginning of an array by shifting all existing elements forward. Below is a detailed breakdown of how it works.  
+
+---
+
+### **1. Including Necessary Header and Namespace**  
+- The program includes a header file to handle input and output operations.  
+- The `using namespace std;` statement is used to avoid writing `std::` before standard functions like `cout` and `cin`.  
+
+---
+
+### **2. Function: `InsertionAtBeiginning`**  
+- This function takes two arguments: an integer array and an integer reference to its size.  
+- The size is passed by reference (`&size`) so that modifications within the function affect the original value in `main()`.  
+- The function prompts the user to input an element that will be inserted at the beginning.  
+
+#### **Shifting Elements**  
+- To make space for the new element, a loop starts from the last element of the array and shifts each element one position forward.  
+- This process ensures that all elements move rightward without overwriting any data.  
+- The loop runs in reverse order to prevent data loss while shifting.  
+
+#### **Inserting the New Element**  
+- After shifting is complete, the new element is placed at index `0`, effectively becoming the first element of the array.  
+- The size of the array is then incremented to account for the newly inserted element.  
+
+---
+
+### **3. Main Function (`main()`)**  
+- The main function starts by declaring an integer array with a maximum size of 50.  
+- The user is prompted to enter the initial size of the array.  
+- A loop is used to take input for each element of the array.  
+
+---
+
+### **4. Calling the Function**  
+- The `InsertionAtBeiginning` function is called with the array and its size.  
+- After the function executes, the array contains the new element at the beginning, with all other elements shifted forward.  
+
+---
+
+### **5. Displaying the Updated Array**  
+- After the insertion, another loop prints all elements of the updated array to show the modifications.  
+- The program ensures that the array remains correctly structured even after inserting a new element.  
+
+---
+
+### **Key Features of the Code**  
+- Uses an efficient shifting mechanism to maintain data integrity.  
+- Implements size tracking to prevent exceeding the array’s maximum limit.  
+- Provides a user-friendly interface by prompting inputs and displaying results clearly.
