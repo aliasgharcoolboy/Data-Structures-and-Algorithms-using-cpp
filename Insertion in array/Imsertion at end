@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+void InsertionAtEnd(int array[], int &size) {
+	int Element_To_Insert;
+	cout<<"Input the element to be inserted"<<endl;
+	cin>>Element_To_Insert;
+
+	array[size] = Element_To_Insert;
+
+	size++;
+
+}
+
+int main()
+{
+	int n;
+	cout<<"Input the size of array"<<endl;
+	cin>>n;
+
+	int numbers[50];
+	for(int i=0; i<n; i++) {
+		cout<<"Input an element"<<endl;
+		cin>>numbers[i];
+	}
+
+	InsertionAtEnd(numbers, n);
+
+	cout<<"Array after insertion at end is"<<endl;
+	for(int i=0; i<n; i++) {
+		cout<<numbers[i]<<" ";
+	}
+	cout<<endl;
+
+	return 0;
+}
