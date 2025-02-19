@@ -1,17 +1,15 @@
-This code is intended to demonstrate deletion of the first element from an array, but it contains a logical error in the input section. The program takes the size of the array from the user and then allows the user to input elements. However, it mistakenly only takes `n-1` elements instead of `n`, which means one element is missing from the array.
+This code demonstrates how to delete an element from the beginning of an array in C++. It starts by taking the size of the array as input from the user and then allows the user to fill the array with elements. The program then displays the original array, deletes the first element, and finally displays the modified array.
 
-In the `main` function, the user is first asked to input the size of the array, which is stored in the variable `n`. Then, an array of size `n` is declared. However, when taking input for the elements, the loop runs from `0` to `n-2` (`i < n-1`), which means only `n-1` elements are stored instead of `n`.
+In the `main` function, the program first asks the user to input the size of the array and stores it in the variable `n`. Then, it declares an array of size `n`. The user is prompted to enter `n` elements, which are stored in the array.
 
-The function `DisplayArray` is used to print the elements of the array. It takes the array and its size as parameters and prints each element with spaces in between.
+The function `DisplayArray` is used to print the contents of the array. It takes the array and its size as parameters and prints each element separated by a space.
 
-The function `DeletionFromBeginning` is supposed to remove the first element by shifting all elements one position to the left. The loop runs from `0` to `n-1`, which means the last iteration tries to access `array[n]`, which is out of bounds. After shifting, the size `n` is decremented to reflect the new size.
+The function `DeletionFromBeginning` is responsible for removing the first element of the array. It does this by shifting all elements one position to the left, effectively overwriting the first element. The loop runs from index `0` to `n-1`, assigning `array[i+1]` to `array[i]`. This means the second element moves to the first position, the third element moves to the second position, and so on. After shifting all elements, the value of `n` is decremented to reflect the new size of the array.
 
-When the program executes, it first displays the original array, then deletes the first element, and finally displays the modified array.
+After the deletion, the modified array is displayed again using the `DisplayArray` function.
 
-However, due to the incorrect input loop (`for(int i = 0; i < n-1; i++)`), the last element of the array remains uninitialized, which may result in undefined behavior when displayed or manipulated. Additionally, in `DeletionFromBeginning`, the loop should run up to `n-1` instead of `n` to avoid accessing `array[n]`.
+One issue in the code is the use of variable-length arrays (VLA), which are not standard in C++. Instead of `int numbers[n]`, dynamic memory allocation using `new` should be used, or a fixed-size array should be declared.
 
-To fix the issues:
-1. Change the input loop condition from `i < n-1` to `i < n` to take all elements properly.
-2. Change the loop condition in `DeletionFromBeginning` from `i < n` to `i < n-1` to prevent accessing out-of-bounds memory.
+Additionally, when shifting elements, the last element is accessed using `array[i+1]`, which might cause an out-of-bounds access if not handled properly. However, since `n` is decreased after shifting, this does not cause an issue in this specific case.
 
-With these corrections, the program will function correctly, allowing proper deletion of the first element and displaying the correct results.
+In summary, this program initializes an array, takes user input, displays the original array, deletes the first element by shifting, and displays the updated array.
