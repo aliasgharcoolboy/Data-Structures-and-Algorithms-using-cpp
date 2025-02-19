@@ -2,7 +2,7 @@
 using namespace std;
 
 void deletionAtIndex(int array[], int &n, int index) {
-	if(index >= 0 && index <= n) {
+	if(index >= 0 && index < n) {
 		for(int i=index; i<n-1; i++) {
 			array[i] = array[i+1];
 		}
