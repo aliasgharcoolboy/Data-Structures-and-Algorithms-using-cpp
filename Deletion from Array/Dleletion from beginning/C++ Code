@@ -22,7 +22,7 @@ int main()
 	cin>>n;
 
 	int numbers[n];
-	for(int i=0; i<n-1; i++) {
+	for(int i=0; i<n; i++) {
 		cout<<"Input an element"<<endl;
 		cin>>numbers[i];
 	}
