@@ -1,0 +1,15 @@
+This code demonstrates how to delete an element from the end of an array in C++. The program begins by taking the size of the array as input from the user and then allows the user to fill the array with elements. It then displays the original array, removes the last element, and finally displays the updated array.
+
+In the `main` function, the user is first asked to input the size of the array, which is stored in the variable `n`. Then, an array of size `n` is declared. The program prompts the user to enter `n` elements, which are stored in the array.
+
+The function `displayArray` is used to print the elements of the array. It takes the array and its size as parameters and prints each element with spaces in between.
+
+The function `deletionFromEnd` is responsible for removing the last element from the array. Instead of shifting elements, it simply decrements `n` by one. This means that the last element is no longer considered part of the array, though it remains in memory until overwritten.
+
+After deletion, the modified array is displayed again using the `displayArray` function.
+
+One issue in the code is that the array is declared using `int numbers[n]`, which is a variable-length array (VLA). VLAs are not part of standard C++. Instead, dynamic memory allocation using `new` should be used, or a fixed-size array should be declared.
+
+Another issue is that `deletionFromEnd` does not handle cases where `n` is already `0`. If the function is called when the array is empty, `n--` would make `n` negative, which could cause unexpected behavior.
+
+In summary, this program initializes an array, takes user input, displays the original array, deletes the last element by reducing the size variable, and displays the updated array. The approach is simple and efficient since no shifting is required when deleting from the end.
