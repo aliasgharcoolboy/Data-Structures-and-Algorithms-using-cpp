@@ -1,0 +1,17 @@
+This code is intended to demonstrate deletion of the first element from an array, but it contains a logical error in the input section. The program takes the size of the array from the user and then allows the user to input elements. However, it mistakenly only takes `n-1` elements instead of `n`, which means one element is missing from the array.
+
+In the `main` function, the user is first asked to input the size of the array, which is stored in the variable `n`. Then, an array of size `n` is declared. However, when taking input for the elements, the loop runs from `0` to `n-2` (`i < n-1`), which means only `n-1` elements are stored instead of `n`.
+
+The function `DisplayArray` is used to print the elements of the array. It takes the array and its size as parameters and prints each element with spaces in between.
+
+The function `DeletionFromBeginning` is supposed to remove the first element by shifting all elements one position to the left. The loop runs from `0` to `n-1`, which means the last iteration tries to access `array[n]`, which is out of bounds. After shifting, the size `n` is decremented to reflect the new size.
+
+When the program executes, it first displays the original array, then deletes the first element, and finally displays the modified array.
+
+However, due to the incorrect input loop (`for(int i = 0; i < n-1; i++)`), the last element of the array remains uninitialized, which may result in undefined behavior when displayed or manipulated. Additionally, in `DeletionFromBeginning`, the loop should run up to `n-1` instead of `n` to avoid accessing `array[n]`.
+
+To fix the issues:
+1. Change the input loop condition from `i < n-1` to `i < n` to take all elements properly.
+2. Change the loop condition in `DeletionFromBeginning` from `i < n` to `i < n-1` to prevent accessing out-of-bounds memory.
+
+With these corrections, the program will function correctly, allowing proper deletion of the first element and displaying the correct results.
