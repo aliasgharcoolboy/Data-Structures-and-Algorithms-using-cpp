@@ -1,0 +1,11 @@
+This program takes an array size as input, then allows the user to enter elements into the array. The user is then asked to enter an index at which they want to delete an element. The program removes the element by shifting the remaining elements to the left and updates the size of the array.
+
+The program begins by asking the user to input the size of the array and stores it in the variable `n`. An array `numbers[n]` is declared to store `n` elements. The user then enters `n` elements, which are stored in the array.
+
+The function `printArray` is responsible for displaying the elements of the array. It takes the array and its size as parameters and prints each element separated by spaces.
+
+The function `deletionAtIndex` is used to remove an element at a specific index. It first checks whether the given index is valid using the condition `if(index >= 0 && index < n)`. This ensures that the index is within the correct range from `0` to `n-1`. If the index is valid, the function shifts all elements from that index onward one position to the left by assigning `array[i] = array[i+1]` for all indices from `index` to `n-2`. After shifting, `n` is decremented to reflect the new size of the array. If the index is invalid, an error message is displayed.
+
+The program first prints the array before deletion using `printArray`. It then calls `deletionAtIndex` to delete the specified element. Finally, the updated array is displayed again using `printArray`.
+
+This program correctly removes an element from a given index and shifts the remaining elements.
